@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mundoarkano.MainPage"
+              BackgroundColor="White">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 40, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Vertical"
+                     Spacing="15" 
+                     BackgroundColor="White">
+            <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="200" HeightRequest="200"  />
+            <Label Text="BIENVENIDO" HorizontalOptions="Center" FontSize="25" TextColor="Black" />
+            <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Horizontal"
+                     Spacing="3" 
+                     BackgroundColor="White">
+                <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="50" HeightRequest="50"  />
+                <Entry x:Name="entryUsuario" Placeholder="Usuario" WidthRequest="200" TextColor="Black" />
+            </StackLayout>
+            <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Orientation="Horizontal"
+                     Spacing="3" 
+                     BackgroundColor="White">
+                <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="50" HeightRequest="50"  />
+                <Entry x:Name="entryContrasena" Placeholder="Contraseña" IsPassword="True" WidthRequest="200" TextColor="Black" />
+            </StackLayout>
+            
+            <Button x:Name="btnIngresar" Text="Ingresar" IsEnabled="True" Clicked="OnIngresar" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

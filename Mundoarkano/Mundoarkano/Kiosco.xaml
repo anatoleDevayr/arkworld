@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="Mundoarkano.Kiosco"
+             BackgroundColor="White">
+
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="Fill"
+                 HorizontalOptions="Center"
+                 Orientation="Vertical"
+                 Spacing="110"
+                 BackgroundColor="White">
+      <Label Text="Kiosko" VerticalOptions="Center" HorizontalOptions="Center" FontSize="50" TextColor="Black" FontAttributes="Bold"/>
+      <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 Orientation="Vertical"
+                 Spacing="10"
+                 BackgroundColor="White">
+        <Entry x:Name="entryProductoK" Placeholder="Producto" WidthRequest="250" TextColor="Black" />
+        <Picker x:Name="pickerCantidad" Grid.Row="0" Title="Cantidad" BackgroundColor="White" >
+          <Picker.Items>
+            <x:String>1</x:String>
+            <x:String>2</x:String>
+            <x:String>3</x:String>
+            <x:String>4</x:String>
+            <x:String>5</x:String>
+            <x:String>6</x:String>
+            <x:String>7</x:String>
+            <x:String>8</x:String>
+            <x:String>9</x:String>
+            <x:String>10</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+      <Button x:Name="btnComprarK" Text="COMPRAR" IsEnabled="True" Clicked="OnComprarK" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" VerticalOptions="End" />
+    </StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>

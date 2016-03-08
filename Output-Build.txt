@@ -1,0 +1,44 @@
+﻿1>------ Rebuild All started: Project: Mundoarkano, Configuration: Debug Any CPU ------
+1>  Mundoarkano -> C:\Users\Tolee\documents\visual studio 2013\Projects\Mundoarkano\Mundoarkano\Mundoarkano\bin\Debug\Mundoarkano.dll
+2>------ Rebuild All started: Project: Mundoarkano.Droid, Configuration: Debug Any CPU ------
+3>------ Skipped Rebuild All: Project: Mundoarkano.iOS, Configuration: Debug iPhone ------
+3>Project not selected to build for this solution configuration 
+4>------ Rebuild All started: Project: Mundoarkano.WinPhone, Configuration: Debug Any CPU ------
+4>  Mundoarkano.WinPhone -> C:\Users\Tolee\documents\visual studio 2013\Projects\Mundoarkano\Mundoarkano\Mundoarkano.WinPhone\Bin\Debug\Mundoarkano.WinPhone.dll
+4>  Begin application manifest generation
+4>  Application manifest generation completed successfully
+4>  Begin Xap packaging
+4>  Creating file PhoneApp1_Debug_AnyCPU.xap
+4>  Adding Mundoarkano.WinPhone.dll
+4>  Adding logoarkano.jpg
+4>  Adding README_FIRST.txt
+4>  Adding SplashScreenImage.jpg
+4>  Adding Assets\AlignmentGrid.png
+4>  Adding Assets\Tiles\FlipCycleTileLarge.png
+4>  Adding Assets\Tiles\FlipCycleTileSmall.png
+4>  Adding Assets\Tiles\IconicTileMediumLarge.png
+4>  Adding Assets\Tiles\IconicTileSmall.png
+4>  Adding Toolkit.Content\ApplicationBar.Add.png
+4>  Adding Toolkit.Content\ApplicationBar.Cancel.png
+4>  Adding Toolkit.Content\ApplicationBar.Check.png
+4>  Adding Toolkit.Content\ApplicationBar.Delete.png
+4>  Adding Toolkit.Content\ApplicationBar.Select.png
+4>  Adding AppManifest.xaml
+4>  Adding Assets\ApplicationIcon.png
+4>  Adding Assets\Tiles\FlipCycleTileMedium.png
+4>  Adding Microsoft.Phone.Controls.Toolkit.dll
+4>  Adding Mundoarkano.dll
+4>  Adding Xamarin.Forms.Core.dll
+4>  Adding Xamarin.Forms.Platform.WP8.dll
+4>  Adding Xamarin.Forms.Xaml.dll
+4>  Adding System.Windows.Interactivity.dll
+4>  Adding Xamarin.Forms.Core.xml
+4>  Adding Xamarin.Forms.Xaml.xml
+4>  Adding WMAppManifest.xml
+4>  Xap packaging completed successfully
+2>C:\Users\Tolee\documents\visual studio 2013\Projects\Mundoarkano\Mundoarkano\Mundoarkano.Droid\Properties\AndroidManifest.xml : warning XA0101: @(Content) build action is not supported
+2>    Processing: obj\Debug\res\values\styles.xml
+2>  Mundoarkano.Droid -> C:\Users\Tolee\documents\visual studio 2013\Projects\Mundoarkano\Mundoarkano\Mundoarkano.Droid\bin\Debug\Mundoarkano.Droid.dll
+2>    Processing: obj\Debug\res\values\styles.xml
+2>    Processing: obj\Debug\res\values\styles.xml
+========== Rebuild All: 3 succeeded, 0 failed, 1 skipped ==========

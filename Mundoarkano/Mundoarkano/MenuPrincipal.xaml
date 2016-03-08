@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mundoarkano.MenuPrincipal"
+             BackgroundColor="White">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="sButtonRecientes" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="FontSize" Value="10" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout VerticalOptions="Fill"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="0"
+                 BackgroundColor="White">
+        <ListView x:Name="listView" RowHeight="110" ItemSelected="OnSelection" >
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <StackLayout Orientation="Vertical" Spacing="3" BackgroundColor="White" Padding="10" >
+                  <Image Source="{Binding imagen}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
+                  <Label Text="{Binding nombre}" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="25" />
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView> 
+    <Label Text="Más Recientes" HorizontalOptions="Center" FontSize="10" TextColor="Gray" />
+    <StackLayout VerticalOptions="End"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Horizontal"
+                 Spacing="5"
+                 BackgroundColor="White">
+        <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="1"
+                 BackgroundColor="White">
+          <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="30" HeightRequest="30"  />
+          <Button x:Name="btnRecienteUnoMP" Text="Tab1" IsEnabled="True" Clicked="OnRecienteUnoMP" Style="{StaticResource sButtonRecientes}" HeightRequest="30"/>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="1"
+                 BackgroundColor="White">
+          <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="30" HeightRequest="30"  />
+          <Button x:Name="btnRecienteDosMP" Text="Tab1" IsEnabled="True" Clicked="OnRecienteDosMP" Style="{StaticResource sButtonRecientes}" HeightRequest="30"/>
+        </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="1"
+                 BackgroundColor="White">
+          <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="30" HeightRequest="30"  />
+          <Button x:Name="btnRecienteTresMP" Text="Tab1" IsEnabled="True" Clicked="OnRecienteTresMP" Style="{StaticResource sButtonRecientes}" HeightRequest="30"/>
+        </StackLayout>
+    </StackLayout>
+      </StackLayout>
+      </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

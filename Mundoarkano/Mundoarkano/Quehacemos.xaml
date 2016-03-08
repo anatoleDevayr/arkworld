@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mundoarkano.Quehacemos"
+             BackgroundColor="White">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <ScrollView>
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 Orientation="Vertical"
+                 Spacing="15"
+                 BackgroundColor="White">
+      <Label Text="Mundo Arkano" HorizontalOptions="Center" FontSize="25" TextColor="Black" />
+      <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="200" HeightRequest="200"  />
+      <Label Text="¿Qué hacemos?" HorizontalOptions="Start" FontSize="15" TextColor="Black" />
+      <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nulla elit, 
+             egestas in ipsum sit amet, suscipit cursus magna. Aenean fringilla tellus eget 
+             sapien bibendum vehicula non at nisi. Morbi eu bibendum ipsum. Class aptent taciti 
+             sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent 
+             rutrum est nec elit dignissim, id eleifend risus pretium. Morbi vitae ipsum hendrerit 
+             leo ornare consectetur nec non nisl. Vestibulum luctus porta nibh ac pulvinar. Cum 
+             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+             Ut hendrerit nibh ut ultrices commodo. Fusce dictum, eros eu elementum euismod, 
+             augue ipsum varius massa, ac sollicitudin sapien dolor sed neque. Nunc malesuada 
+             vestibulum urna, non fermentum nibh consectetur in. Suspendisse non ante facilisis 
+             arcu rutrum facilisis non vitae dolor. Nunc erat elit, tincidunt sit amet nibh et, 
+             congue pellentesque augue. Fusce tristique tincidunt metus et vehicula. Aenean blandit 
+             velit at augue fermentum sollicitudin. Fusce sit amet elit a mi eleifend fringilla." 
+             HorizontalOptions="Start" VerticalOptions="Start" FontSize="10" TextColor="Black" />
+    </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

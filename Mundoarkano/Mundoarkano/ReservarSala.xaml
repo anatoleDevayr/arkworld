@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mundoarkano.ReservarSala">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Orientation="Vertical"
+                   Spacing="15"
+                   BackgroundColor="White">
+        <Label Text="Reservar sala de reuniones" HorizontalOptions="Center" FontSize="15" TextColor="Black" />
+        <Label Text="Fecha de reserva: " HorizontalOptions="Center" FontSize="15" TextColor="Black" />
+        
+        
+
+        <Label Text="Detalle asunto de reunión: " HorizontalOptions="Center" FontSize="15" TextColor="Black" />
+        <Editor x:Name="editAsuntoRS">
+          <Editor.BackgroundColor>
+            <OnPlatform x:TypeArguments="x:Color"
+                iOS="#a4eaff"
+                Android="#2c3e50"
+                WinPhone="#2c3e50" />
+          </Editor.BackgroundColor>
+        </Editor>
+        <Button x:Name="btnEnviarReservaRS" Text="Reservar" IsEnabled="True" Clicked="OnReservarSalaRS" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" />
+
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+
+</ContentPage>
