@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Mundoarkano.ReservarSala">
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="Mundoarkano.ReservarSala"
+              BackgroundColor="White">
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness"
                 iOS="20, 40, 20, 20"
@@ -10,24 +12,43 @@
   </ContentPage.Padding>
   <ContentPage.Content>
     <ScrollView>
-      <StackLayout VerticalOptions="Center"
-                   HorizontalOptions="Center"
+      <StackLayout VerticalOptions="Fill"
+                   HorizontalOptions="Fill"
                    Orientation="Vertical"
-                   Spacing="15"
+                   Spacing="30"
                    BackgroundColor="White">
-        <Label Text="Reservar sala de reuniones" HorizontalOptions="Center" FontSize="15" TextColor="Black" />
+        <Label Text="Reservar sala de reuniones" HorizontalOptions="Center" FontSize="25" TextColor="Black" />
         <Label Text="Fecha de reserva: " HorizontalOptions="Center" FontSize="15" TextColor="Black" />
-        
-        
+        <DatePicker x:Name="dateFechaSala" Date="{x:Static sys:DateTime.Now}" BackgroundColor="Gray" >
+          <DatePicker.Format Opacity="5">yyyy-MM-dd</DatePicker.Format>
+          <DatePicker.MinimumDate>
+            <sys:DateTime x:FactoryMethod="Parse">
+              <x:Arguments>
+                <x:String>Jan 1 2000</x:String>
+              </x:Arguments>
+            </sys:DateTime>
+          </DatePicker.MinimumDate>
+          <DatePicker.MaximumDate>
+            <sys:DateTime x:FactoryMethod="Parse">
+              <x:Arguments>
+                <x:String>Dec 31 2050</x:String>
+              </x:Arguments>
+            </sys:DateTime>
+          </DatePicker.MaximumDate>
+        </DatePicker>
+        <Picker x:Name="pickerSala" Grid.Row="0" Title="Sala" BackgroundColor="White"  >
+          <Picker.Items>
+            <x:String>Maracaná</x:String>
+            <x:String>Colombes</x:String>
+            <x:String>América</x:String>
+            <x:String>Olípica</x:String>
+            <x:String>Amsterdam</x:String>
+          </Picker.Items>
+        </Picker>
+
 
         <Label Text="Detalle asunto de reunión: " HorizontalOptions="Center" FontSize="15" TextColor="Black" />
-        <Editor x:Name="editAsuntoRS">
-          <Editor.BackgroundColor>
-            <OnPlatform x:TypeArguments="x:Color"
-                iOS="#a4eaff"
-                Android="#2c3e50"
-                WinPhone="#2c3e50" />
-          </Editor.BackgroundColor>
+        <Editor x:Name="editAsuntoRS" BackgroundColor="Gray" HeightRequest="80" >
         </Editor>
         <Button x:Name="btnEnviarReservaRS" Text="Reservar" IsEnabled="True" Clicked="OnReservarSalaRS" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" />
 

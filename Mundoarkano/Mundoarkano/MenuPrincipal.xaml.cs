@@ -41,6 +41,8 @@ namespace Mundoarkano
             }
             if (e.SelectedItem.ToString() == "MUNDO ARKANO")
                 Navigation.PushAsync(new Kiosco());
+            else if (e.SelectedItem.ToString() == "ADMINISTRACIÓN")
+                Navigation.PushAsync(new ReservarSala());
             //DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
             //((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
         }
