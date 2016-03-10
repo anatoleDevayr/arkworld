@@ -14,5 +14,27 @@ namespace Mundoarkano
         {
             InitializeComponent();
         }
+
+        void OnClickCeroDos(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Kiosco());
+        }
+
+        void OnClickUnoCero(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new IncidentesInternos());
+        }
+
+        void OnClickUnoDos(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ReservarSala());
+        }
+
+        void OnClickDosDos(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LinksComunes());
+        }
+
+
     }
 }

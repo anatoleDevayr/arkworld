@@ -11,20 +11,14 @@
   </ContentPage.Padding>
   <ContentPage.Content>
     <ScrollView>
-      <StackLayout VerticalOptions="Center"
-                   HorizontalOptions="Center"
+      <StackLayout VerticalOptions="Fill"
+                   HorizontalOptions="Fill"
                    Orientation="Vertical"
-                   Spacing="15"
+                   Spacing="30"
                    BackgroundColor="White">
         <Label Text="Reporte incidentes internos" HorizontalOptions="Center" FontSize="15" TextColor="Black" />
         <Label Text="Detalle su incidente: " HorizontalOptions="Center" FontSize="15" TextColor="Black" />
-        <Editor x:Name="editIncidenteII">
-          <Editor.BackgroundColor>
-            <OnPlatform x:TypeArguments="x:Color"
-                iOS="#a4eaff"
-                Android="#2c3e50"
-                WinPhone="#2c3e50" />
-          </Editor.BackgroundColor>
+        <Editor x:Name="editIncidenteII" HeightRequest="200" BackgroundColor="Gray">
         </Editor>
         <Button x:Name="btnEnviarIncidenteII" Text="Enviar" IsEnabled="True" Clicked="OnEnviarIncidenteII" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" />
 
