@@ -40,7 +40,7 @@ namespace Mundoarkano
                 return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
             }
             if (e.SelectedItem.ToString() == "MUNDO ARKANO")
-                Navigation.PushAsync(new Kiosco());
+                Navigation.PushAsync(new SubMenuMundoArk());
             else if (e.SelectedItem.ToString() == "ADMINISTRACIÓN")
                 Navigation.PushAsync(new ReservarSala());
             else if (e.SelectedItem.ToString() == "TALENTOS")
