@@ -33,6 +33,7 @@ namespace Mundoarkano
 
         void OnReservarSalaRS(object sender, EventArgs e)
         {
+			String hola = "sssss";
 			var email = DependencyService.Get<IEmail> ();
 			String destinatario = "";
 			if (email != null) {
