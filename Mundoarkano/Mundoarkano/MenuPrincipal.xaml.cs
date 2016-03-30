@@ -45,6 +45,8 @@ namespace Mundoarkano
                 Navigation.PushAsync(new ReservarSala());
             else if (e.SelectedItem.ToString() == "TALENTOS")
                 Navigation.PushAsync(new LinksComunes());
+            else if (e.SelectedItem.ToString() == "PROYECTOS")
+                Navigation.PushAsync(new Quehacemos());
         }
 
         void OnRecienteUnoMP(object sender, EventArgs e)

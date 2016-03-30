@@ -123,6 +123,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="arkanohori.jpg" />
     <Content Include="logoarkano.jpg" />
     <Content Include="logoarkanochico.jpg" />
     <Content Include="README_FIRST.txt" />

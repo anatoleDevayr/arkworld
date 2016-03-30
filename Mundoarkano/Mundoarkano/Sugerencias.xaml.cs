@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Xamarin.Forms;
+
 namespace Mundoarkano
 {
-    public interface IEmail
+    public partial class Sugerencias : ContentPage
     {
-        void EnviarMail(string remitente, string destinatario, string asunto, string cuerpo);
+        public Sugerencias()
+        {
+            InitializeComponent();
+        }
     }
 }

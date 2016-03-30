@@ -3,40 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mundoarkano.SubMenuMundoArk"
              BackgroundColor="White">
-  <ContentPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness"
-                iOS="20, 40, 20, 20"
-                Android="20, 20, 20, 20"
-                WinPhone="20, 20, 20, 20" />
-  </ContentPage.Padding>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="sButtonRecientes" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="FontSize" Value="10" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
   <ContentPage.Content>
     <ScrollView>
       <StackLayout VerticalOptions="Fill"
                  HorizontalOptions="FillAndExpand"
                  Orientation="Vertical"
-                 Spacing="5"
+                 Spacing="10"
                  BackgroundColor="White">
-        <Label Text="MUNDO ARKANO" VerticalOptions="Center" HorizontalOptions="Center" />
-        <Grid>
-          <Grid.RowDefinitions>
+        <Label Text="MUNDO ARKANO" VerticalOptions="Center" HorizontalOptions="Center" FontSize="30" TextColor="Black"/>
+        <Grid Padding="0" VerticalOptions="Center" HorizontalOptions="Center">
+          <Grid.RowDefinitions Padding="0">
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
           </Grid.RowDefinitions>
 
-          <Grid.ColumnDefinitions>
+          <Grid.ColumnDefinitions Padding="0">
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
           </Grid.ColumnDefinitions>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="0" Grid.Column="0">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Contacto" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Contacto" BackgroundColor="White" TextColor="Black" HeightRequest="35"  />
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="0" Grid.Column="1">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Noticias" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Noticias" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="0" Grid.Column="2">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" >
@@ -44,54 +48,85 @@
                 <TapGestureRecognizer Tapped="OnClickCeroDos" NumberOfTapsRequired="1" />
               </Image.GestureRecognizers>
             </Image>
-            <Button Text="Kiosko" BackgroundColor="White" TextColor="Black" Clicked="OnClickCeroDos" />
+            <Button Text="Kiosko" BackgroundColor="White" TextColor="Black" Clicked="OnClickCeroDos" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="1" Grid.Column="0">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="OnClickUnoCero" NumberOfTapsRequired="1" />
             </Image.GestureRecognizers>
-            <Button Text="ERP" BackgroundColor="White" TextColor="Black" Clicked="OnClickUnoCero"/>
+            <Button Text="ERP" BackgroundColor="White" TextColor="Black" Clicked="OnClickUnoCero" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="1" Grid.Column="1">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Gastos" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Gastos" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="1" Grid.Column="2">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="OnClickUnoDos" NumberOfTapsRequired="1" />
             </Image.GestureRecognizers>
-            <Button Text="Salas" BackgroundColor="White" TextColor="Black" Clicked="OnClickUnoDos"/>
+            <Button Text="Salas" BackgroundColor="White" TextColor="Black" Clicked="OnClickUnoDos" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="2" Grid.Column="0">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Yammer" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Yammer" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="2" Grid.Column="1">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Newsletter" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Newsletter" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="2" Grid.Column="2">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="OnClickDosDos" NumberOfTapsRequired="1" />
             </Image.GestureRecognizers>
-            <Button Text="Info. de Interes" BackgroundColor="White" TextColor="Black" Clicked="OnClickDosDos"/>
+            <Button Text="Info. de Interes" BackgroundColor="White" TextColor="Black" Clicked="OnClickDosDos" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="3" Grid.Column="0">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Encuesta Clima" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Encuesta Clima" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="3" Grid.Column="1">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="Alianzas" BackgroundColor="White" TextColor="Black" />
+            <Button Text="Alianzas" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
           <StackLayout VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" BackgroundColor="White" Grid.Row="3" Grid.Column="2">
             <Image Source="logoarkano.jpg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50" />
-            <Button Text="OPA's" BackgroundColor="White" TextColor="Black" />
+            <Button Text="OPA's" BackgroundColor="White" TextColor="Black" HeightRequest="35"/>
           </StackLayout>
         </Grid>
+        <Label Text="Más Recientes" HorizontalOptions="Center" FontSize="10" TextColor="Gray" />
+        <StackLayout VerticalOptions="End"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Horizontal"
+                     Spacing="5"
+                     BackgroundColor="White">
+          <StackLayout VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Orientation="Vertical"
+                   Spacing="1"
+                   BackgroundColor="White">
+            <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="30" HeightRequest="30"  />
+            <Button x:Name="btnRecienteUnoMP" Text="Tab1" IsEnabled="True" Clicked="OnRecienteUnoSM" Style="{StaticResource sButtonRecientes}" HeightRequest="30"/>
+          </StackLayout>
+          <StackLayout VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Orientation="Vertical"
+                   Spacing="1"
+                   BackgroundColor="White">
+            <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="30" HeightRequest="30"  />
+            <Button x:Name="btnRecienteDosMP" Text="Tab1" IsEnabled="True" Clicked="OnRecienteDosSM" Style="{StaticResource sButtonRecientes}" HeightRequest="30"/>
+          </StackLayout>
+          <StackLayout VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Orientation="Vertical"
+                   Spacing="1"
+                   BackgroundColor="White">
+            <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="30" HeightRequest="30"  />
+            <Button x:Name="btnRecienteTresMP" Text="Tab1" IsEnabled="True" Clicked="OnRecienteTresSM" Style="{StaticResource sButtonRecientes}" HeightRequest="30"/>
+          </StackLayout>
+        </StackLayout>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

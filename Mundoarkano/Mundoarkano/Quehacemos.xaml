@@ -3,23 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mundoarkano.Quehacemos"
              BackgroundColor="White">
-  <ContentPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness"
-                iOS="20, 40, 20, 20"
-                Android="20, 20, 20, 20"
-                WinPhone="20, 20, 20, 20" />
-  </ContentPage.Padding>
+  
 
   <ContentPage.Content>
     <ScrollView>
     <StackLayout VerticalOptions="Center"
                  HorizontalOptions="Center"
                  Orientation="Vertical"
-                 Spacing="15"
+                 Spacing="10"
                  BackgroundColor="White">
-      <Label Text="Mundo Arkano" HorizontalOptions="Center" FontSize="25" TextColor="Black" />
-      <Image Aspect="AspectFit" Source="logoarkano.jpg" WidthRequest="200" HeightRequest="200"  />
-      <Label Text="¿Qué hacemos?" HorizontalOptions="Start" FontSize="15" TextColor="Black" />
+      <Image Aspect="AspectFit" Source="arkanohori.jpg" WidthRequest="400" HorizontalOptions="StartAndExpand" VerticalOptions="Start" />
       <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nulla elit, 
              egestas in ipsum sit amet, suscipit cursus magna. Aenean fringilla tellus eget 
              sapien bibendum vehicula non at nisi. Morbi eu bibendum ipsum. Class aptent taciti 
@@ -33,7 +26,7 @@
              arcu rutrum facilisis non vitae dolor. Nunc erat elit, tincidunt sit amet nibh et, 
              congue pellentesque augue. Fusce tristique tincidunt metus et vehicula. Aenean blandit 
              velit at augue fermentum sollicitudin. Fusce sit amet elit a mi eleifend fringilla." 
-             HorizontalOptions="Start" VerticalOptions="Start" FontSize="10" TextColor="Black" />
+             HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="16" TextColor="Black"  />
     </StackLayout>
     </ScrollView>
   </ContentPage.Content>

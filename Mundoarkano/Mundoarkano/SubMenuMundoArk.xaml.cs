@@ -35,6 +35,20 @@ namespace Mundoarkano
             Navigation.PushAsync(new LinksComunes());
         }
 
+        void OnRecienteUnoSM(object sender, EventArgs e)
+        {
+
+        }
+
+        void OnRecienteDosSM(object sender, EventArgs e)
+        {
+
+        }
+
+        void OnRecienteTresSM(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

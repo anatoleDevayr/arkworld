@@ -37,13 +37,7 @@
           </DatePicker.MaximumDate>
         </DatePicker>
         <Picker x:Name="pickerSala" Grid.Row="0" Title="Sala" BackgroundColor="White"  >
-          <Picker.Items>
-            <x:String>Maracaná</x:String>
-            <x:String>Colombes</x:String>
-            <x:String>América</x:String>
-            <x:String>Olípica</x:String>
-            <x:String>Amsterdam</x:String>
-          </Picker.Items>
+          
         </Picker>
 
 

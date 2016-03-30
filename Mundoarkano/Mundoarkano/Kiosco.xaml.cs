@@ -13,6 +13,7 @@ namespace Mundoarkano
         public Kiosco()
         {
             InitializeComponent();
+			pickerCantidad.Opacity = 1;
         }
 
         void OnComprarK(object sender, EventArgs e)
