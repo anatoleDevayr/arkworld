@@ -14,6 +14,7 @@ namespace Mundoarkano
         String prueba = "unaPruebaParaGit";
         String prueba2 = "Prueba modificando yo";
         String nueva = "La prueba nuevba";
+        String nuevanueva = "Prueba 4";
 
         public ReservarSala()
         {
