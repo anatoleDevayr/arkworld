@@ -11,6 +11,7 @@ namespace Mundoarkano
     public partial class ReservarSala : ContentPage
     {
 		List<String> salas = new List<String>();
+        String prueba = "unaPruebaParaGit";
 
         public ReservarSala()
         {
