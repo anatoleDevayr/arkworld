@@ -12,6 +12,7 @@ namespace Mundoarkano
     {
 		List<String> salas = new List<String>();
         String prueba = "unaPruebaParaGit";
+        String prueba2 = "Prueba modificando yo";
 
         public ReservarSala()
         {
