@@ -15,6 +15,8 @@ namespace Mundoarkano
         String prueba2 = "Prueba modificando yo";
         String nueva = "La prueba nuevba";
         String nuevanueva = "Prueba 4";
+        String roberto = "La revancha en 100 anios V";
+
 
         public ReservarSala()
         {
