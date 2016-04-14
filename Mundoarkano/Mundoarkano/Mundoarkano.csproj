@@ -72,7 +72,8 @@
       <DependentUpon>Sugerencias.xaml</DependentUpon>
     </Compile>
     <Compile Include="NotifyPropertyChangeBase.cs" />
-    <Compile Include="TrabajandoViewModel.cs" />
+    <Compile Include="TrabKioscoModel.cs" />
+    <Compile Include="TrabReservaModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=1.3.3.0, Culture=neutral, PublicKeyToken=null">

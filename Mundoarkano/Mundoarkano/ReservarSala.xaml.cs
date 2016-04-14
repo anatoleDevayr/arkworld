@@ -10,13 +10,8 @@ namespace Mundoarkano
 {
     public partial class ReservarSala : ContentPage
     {
+        private TrabReservaModel estado;
 		List<String> salas = new List<String>();
-        String prueba = "unaPruebaParaGit";
-        String prueba2 = "Prueba modificando yo";
-        String nueva = "La prueba nuevba";
-        String nuevanueva = "Prueba 4";
-        String roberto = "La revancha en 100 anios V";
-
 
         public ReservarSala()
         {
@@ -28,6 +23,7 @@ namespace Mundoarkano
 			salas.Add("Olímpica");
 			salas.Add("Amsterdam");
 			cargarPicker ();
+            this.estado = new TrabReservaModel();
         }
 
 		private void cargarPicker(){
@@ -37,13 +33,25 @@ namespace Mundoarkano
 			}
 		}
 
-        void OnReservarSalaRS(object sender, EventArgs e)
+        async void OnReservarSalaRS(object sender, EventArgs e)
         {
-			String hola = "sssss";
 			var email = DependencyService.Get<IEmail> ();
 			String destinatario = "";
 			if (email != null) {
-				
+
+                estado.estaTrabajando = true;
+                estado.btnReservaHabilitado = false;
+                estado.datePickerHabilitado = false;
+                estado.editTextHabilitado = false;
+                estado.pickerSalaHabilitado = false;
+
+                dateFechaSala.IsEnabled = estado.datePickerHabilitado;
+                pickerSala.IsEnabled = estado.pickerSalaHabilitado;
+                editAsuntoRS.IsEnabled = estado.editTextHabilitado;
+                btnEnviarReservaRS.IsEnabled = estado.btnReservaHabilitado;
+				reloj.IsRunning = estado.estaTrabajando;
+                
+
 				if (pickerSala.SelectedIndex == 0)
 					destinatario = "ramiro.sala85@gmail.com";
 					//destinatario = "sala.maracana@arkanosoft.com";
@@ -58,10 +66,23 @@ namespace Mundoarkano
 
 				String cuerpo = "El usuario " + App.usuarioActivo + " solicita utilizar sala." + Environment.NewLine + "Fecha: " + 
 					dateFechaSala.Date.ToString() + Environment.NewLine + "Sala: " + salas[pickerSala.SelectedIndex];
-
+                
+                await Task.Delay(500);
 				email.EnviarMail ("mundoarkano@arkanosoft.com", destinatario, editAsuntoRS.Text, cuerpo);
 			}
-				
+
+            await DisplayAlert("OK", "La reserva fue realizada exitosamente", "OK");
+            estado.estaTrabajando = false;
+            estado.btnReservaHabilitado = true;
+            estado.datePickerHabilitado = true;
+            estado.editTextHabilitado = true;
+            estado.pickerSalaHabilitado = true;
+
+            dateFechaSala.IsEnabled = estado.datePickerHabilitado;
+            pickerSala.IsEnabled = estado.pickerSalaHabilitado;
+            editAsuntoRS.IsEnabled = estado.editTextHabilitado;
+            btnEnviarReservaRS.IsEnabled = estado.btnReservaHabilitado;
+            reloj.IsRunning = estado.estaTrabajando;
 		}
     }
 }

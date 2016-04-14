@@ -45,7 +45,7 @@
         <Editor x:Name="editAsuntoRS" BackgroundColor="Gray" HeightRequest="80" >
         </Editor>
         <Button x:Name="btnEnviarReservaRS" Text="Reservar" IsEnabled="True" Clicked="OnReservarSalaRS" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" />
-
+        <ActivityIndicator x:Name="reloj"/>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

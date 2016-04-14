@@ -22,25 +22,21 @@
                  HorizontalOptions="Center"
                  Orientation="Vertical"
                  Spacing="10"
-                 BackgroundColor="White">
+                 BackgroundColor="Gray">
         <Entry x:Name="entryProductoK" Placeholder="Producto" WidthRequest="250" TextColor="Black" />
-        <Picker x:Name="pickerCantidad" Grid.Row="0" Title="Cantidad" BackgroundColor="White" >
-          <Picker.Items>
-            <x:String>1</x:String>
-            <x:String>2</x:String>
-            <x:String>3</x:String>
-            <x:String>4</x:String>
-            <x:String>5</x:String>
-            <x:String>6</x:String>
-            <x:String>7</x:String>
-            <x:String>8</x:String>
-            <x:String>9</x:String>
-            <x:String>10</x:String>
-          </Picker.Items>
+        <Picker x:Name="pickerCantidad" Grid.Row="0" Title="Cantidad" BackgroundColor="Gray" >
+          
         </Picker>
       </StackLayout>
-      <Button x:Name="btnComprarK" Text="COMPRAR" IsEnabled="True" Clicked="OnComprarK" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent" VerticalOptions="End" />
+      <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 Orientation="Vertical"
+                 Spacing="10">
+      <Button VerticalOptions="FillAndExpand" x:Name="btnComprarK" Text="COMPRAR" IsEnabled="True" Clicked="OnComprarK" BackgroundColor="Gray" BorderRadius="5" BorderColor="Transparent"/>
+      <ActivityIndicator x:Name="reloj"/>
+      </StackLayout>
     </StackLayout>
+
   </ContentPage.Content>
   
 </ContentPage>
